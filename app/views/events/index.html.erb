@@ -9,7 +9,8 @@
 <th>#</th>
 <th>Date</th>
 <th>賽事</th>
-<th colspan="4"></th>
+<th>分數</th>
+<th colspan="5"></th>
 </tr>
 </thead>
   <tbody>
@@ -18,6 +19,7 @@
         <td><%= event.id %></td>
         <td><%= event.time.to_date %></td>
         <td><%= link_to event.name, event %></td>
+        <td><%= event.homescore %> vs <%= event.awayscore %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
